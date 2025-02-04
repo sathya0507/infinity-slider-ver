@@ -1,0 +1,76 @@
+// Global Styles
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background for the page */
+  color: #E0E0E0; /* Light text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+// Keyframes for the vertical scrolling animation
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(calc(-80px * 7)); } /* Adjust based on slide height */
+}
+
+// Slider container for vertical scroll
+.slider {
+  padding: 20px;
+  background: #1E1E1E;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+  width: 250px; /* Adjusted for vertical layout */
+  height: 560px; /* Adjust the height for vertical scrolling */
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Slide Track with vertical scroll animation
+.slide-track {
+  display: flex;
+  flex-direction: column; /* Stack the slides vertically */
+  height: max-content;
+  animation: scroll 5s linear infinite; /* Continuous scroll animation */
+  animation-play-state: running;
+}
+
+// Individual Slide
+.slide {
+  width: 250px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+// Tab (link button)
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #2C2C2C;
+  color: #F1F1F1;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+// Hover effect for tabs
+.tab:hover {
+  // color: #444;
+  transform: translateY(-4px);
+}
